@@ -18,7 +18,7 @@
     <![endif]-->
 	<style>
 		.bg {
-  background: url('back.jpg') no-repeat center center;
+  background: url('../Test-Site-1/back.jpg') no-repeat center center;
   position: fixed;
   width: 100%;
   height: 600px; /*same height as jumbotron */
@@ -46,7 +46,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="index.html"><img src="logo.png" class="img-responsive" alt="Placeholder image"></a>
+      <a class="navbar-brand" href="index.html"><img src="../Test-Site-1/logo.png" class="img-responsive" alt="Placeholder image"></a>
       <a class="navbar-brand" href="index.html">IzDatWebsite</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="topFixedNavbar1">
@@ -56,8 +56,8 @@
         <li><a href="about.html">About</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Websites<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="https://l3n0ire.github.io/pmwebv1/">Pacific Maritime</a></li>
-            <li><a href="test1.php">Coming Soon</a></li>
+            <li><a href="../Dw.web/index.html">Pacific Maritime</a></li>
+            <li><a href="#">Coming Soon</a></li>
             <li><a href="#">Coming Soon</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="https://en.wikipedia.org/wiki/Adobe_Dreamweaver" target="_blank">Built With Dreamweaver</a></li>
@@ -78,35 +78,19 @@
 
 <div class="container">
   <div class="row">
-    <h2>Clash Royal Private Server</h2>
-    <h4>Last Updated on Aug 15 2017</h4>
-    <img src="clashRoyaleServer.jpg" class="img-responsive" alt="Placeholder image">
-    <br>
-    <br>
-    <br>
-	  <a href="clashRoyaleServer.apk" class="btn btn-primary button" download>Download Apk</a>
-	  
-    <br>
-	<br>
-	<hr>
-  </div>
-  
-
-<div class="container">
-  <div class="row">
     <h2>Pacific Maritime Website</h2>
-    <h4>Last Updated on Nov 12 2016</h4>
+    <h4>Last Updated on Nov 12</h4>
     <img src="PMWEB.jpeg" class="img-responsive" alt="Placeholder image">
     <br>
     <br>
     <br>
-	  <a href="https://l3n0ire.github.io/pmwebv1/" class="btn btn-primary button">Visit This Site</a>
+	  <a href="../Dw.web/index.html" class="btn btn-primary button">Visit This Site</a>
 	  
     
   </div>
   <div class="row">
    <h2>BookFace - Social Media Platform</h2>
-    <h4>Last Updated on Nov 20 2016</h4>
+    <h4>Last Updated on Nov 20</h4>
     <img src="BookFace.jpg" class="img-responsive" alt="Placeholder image">
     <br>
     <br>
@@ -117,17 +101,36 @@
   <hr>
 <div class="row">
    
-    <h2>More Websites Coming Soon!</h2>
+    <h2>Comment Section Test</h2>
+	<?php
+	
+	if($_POST){
+		$name = $_POST['name'];
+		$content = $_POST['commentContent'];
+		$handle = fopen("comments.html","a");
+		fwrite($handle,"<br>" . $name . " : " . $content);
+		fclose($handle);
+	}
+	?>
+
+
+	<form action ="" method ="POST">
+		Comments: <textarea rows ="10" cols ="30" name ="commentContent"></textarea><br>
+	    Name: <Input type= "text" name = "name"><br>
+		<input type = "submit" value ="POST!"><br>
+	</form>
+		<?php include "comments.html";?>
 
     
   </div>
+
  
 
 <hr>
 
 <div class="container">
 	<div class="row">
-      <div class="col-md-12 text-center"><p>Copyright &copy 2017 Colin Lin</p></div>
+      <div class="col-md-12 text-center"><p>Copyright &copy 2016 Colin Lin</p></div>
     </div>
 </div>
 	</div>
